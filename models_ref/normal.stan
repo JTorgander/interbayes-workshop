@@ -11,6 +11,7 @@ parameters {
   real<lower=0> sigma;
 }
 model {
+  y ~ normal(x * beta + alpha, sigma);
   alpha ~ normal(0, 10);
   beta ~ normal(0, 10);
   sigma ~ normal(0, 10);
